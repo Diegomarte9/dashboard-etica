@@ -152,7 +152,7 @@ function SidebarProvider({
 function Sidebar({
   side = "left",
   variant = "floating",
-  collapsible = "offcanvas",
+  collapsible = "icon",
   className,
   children,
   ...props

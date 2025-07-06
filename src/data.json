@@ -1,0 +1,138 @@
+{
+    "dashboardTitle": "Impacto de la Automatización y la IA en el Empleo en República Dominicana",
+    "lastUpdatedEstimate": "Julio 2025 (Verificar con fuentes oficiales)",
+    "dataSources": [
+      "Banco Central de la República Dominicana (BCRD)",
+      "Oficina Internacional del Trabajo (OIT)",
+      "CEPAL (Comisión Económica para América Latina y el Caribe)",
+      "INFOTEP (Instituto Nacional de Formación Técnico Profesional)",
+      "Estudios sectoriales y de consultoras privadas"
+    ],
+    "employmentMetrics": {
+      "sectionTitle": "Métricas Clave del Empleo",
+      "notes": "Los datos de empleo provienen del BCRD y reflejan la situación más reciente disponible (generalmente Q1 2025 o finales de 2024).",
+      "totalOccupiedPopulation": {
+        "value": "4.8M - 4.9M",
+        "unit": "personas",
+        "period": "Estimado Q1 2025",
+        "description": "Población total ocupada en la República Dominicana."
+      },
+      "unemploymentRate": {
+        "value": "4.8% - 5.2%",
+        "unit": "porcentaje",
+        "period": "Estimado Q1 2025",
+        "description": "Tasa de desocupación abierta."
+      },
+      "occupiedPopulationBySector": {
+        "title": "Población Ocupada por Sector Económico",
+        "unit": "porcentaje",
+        "period": "Estimado 2024/Q1 2025",
+        "data": [
+          { "sector": "Servicios (Comercio, Turismo, Financieros, etc.)", "percentage": 60, "notes": "Rango 60-65%" },
+          { "sector": "Industria (Manufactura, Zonas Francas)", "percentage": 18, "notes": "Rango 15-20%" },
+          { "sector": "Agropecuario", "percentage": 9, "notes": "Rango 8-10%" },
+          { "sector": "Construcción", "percentage": 7, "notes": "Rango 6-8%" },
+          { "sector": "Otros", "percentage": 6, "notes": "El resto" }
+        ],
+        "historicalDataPlaceholder": [
+          { "year": 2020, "Servicios": 58, "Industria": 19, "Agropecuario": 10, "Construccion": 7, "Otros": 6 },
+          { "year": 2021, "Servicios": 59, "Industria": 19, "Agropecuario": 9, "Construccion": 7, "Otros": 6 },
+          { "year": 2022, "Servicios": 60, "Industria": 18, "Agropecuario": 9, "Construccion": 7, "Otros": 6 },
+          { "year": 2023, "Servicios": 61, "Industria": 18, "Agropecuario": 9, "Construccion": 7, "Otros": 5 },
+          { "year": 2024, "Servicios": 62, "Industria": 17, "Agropecuario": 9, "Construccion": 7, "Otros": 5 }
+        ]
+      },
+      "informalityRate": {
+        "value": "50% - 53%",
+        "unit": "porcentaje",
+        "period": "Estimado 2024/Q1 2025",
+        "description": "Porcentaje de la población ocupada en el sector informal."
+      }
+    },
+    "automationAndAIAdoption": {
+      "sectionTitle": "Adopción de Automatización e IA",
+      "notes": "Estos datos suelen ser estimaciones de estudios de mercado o consultoras.",
+      "companiesImplementingAI": {
+        "value": "70%+",
+        "unit": "porcentaje",
+        "period": "Estimado 2024/2025",
+        "description": "Porcentaje de empresas dominicanas utilizando o planificando usar IA/Automatización.",
+        "sourceNote": "Basado en tendencias y estudios de 2023."
+      },
+      "aiInvestmentProjection": {
+        "title": "Proyección de Inversión en IA en RD",
+        "value": "$80M",
+        "unit": "USD",
+        "period": "Proyectado para 2030",
+        "description": "Crecimiento de la inversión anual en IA en RD.",
+        "historicalStart": { "value": "$10M", "year": 2021 }
+      }
+    },
+    "projectedImpactAndSkills": {
+      "sectionTitle": "Impacto Proyectado y Brechas de Habilidades",
+      "notes": "Proyecciones y análisis de organismos internacionales y fuentes locales.",
+      "jobsSusceptibleToAutomation": {
+        "title": "Empleos Susceptibles a la Automatización (ALC)",
+        "value": "26% - 38%",
+        "unit": "porcentaje",
+        "period": "Próxima década (Proyección)",
+        "description": "Rango de empleos en América Latina y el Caribe que podrían verse afectados por la automatización y la IA generativa.",
+        "sourceNote": "Estimación regional de OIT/CEPAL."
+      },
+      "mostSusceptibleSectors": [
+        "Tareas repetitivas y rutinarias (ej., ensamblaje, entrada de datos, telemarketing simple)",
+        "Contabilidad básica",
+        "Algunas áreas de servicios al cliente",
+        "Logística y transporte"
+      ],
+      "lessSusceptibleSectors": [
+        "Roles que requieren creatividad",
+        "Pensamiento crítico",
+        "Interacción social compleja",
+        "Resolución de problemas no rutinarios",
+        "Gestión de personas"
+      ],
+      "infotepTraining": {
+        "title": "Participación en Programas de Capacitación INFOTEP",
+        "value": "Cientos de miles",
+        "unit": "personas",
+        "period": "Anual (2024)",
+        "description": "Número de personas capacitadas por INFOTEP en diversas áreas, incluyendo digitalización y tecnología.",
+        "sourceNote": "Buscar cifras exactas en informes anuales de INFOTEP."
+      },
+      "highlyDemandedSkills": {
+        "title": "Habilidades Más Demandadas (Tendencia 2024-2025)",
+        "technicalSkills": [
+          "Análisis de Datos y Big Data",
+          "Inteligencia Artificial y Machine Learning",
+          "Ciberseguridad",
+          "Desarrollo de Software (web/móvil)",
+          "Cloud Computing"
+        ],
+        "softSkills": [
+          "Pensamiento Crítico y Resolución de Problemas",
+          "Creatividad e Innovación",
+          "Inteligencia Emocional",
+          "Colaboración y Trabajo en Equipo",
+          "Adaptabilidad y Aprendizaje Continuo"
+        ]
+      }
+    },
+    "ethicalConsiderations": {
+      "sectionTitle": "Consideraciones Éticas y Futuro del Trabajo",
+      "points": [
+        {
+          "title": "Derecho a la Reconversión Laboral",
+          "description": "Programas de capacitación y recualificación (INFOTEP, universidades). Accesibilidad, financiamiento y apoyo a trabajadores desplazados."
+        },
+        {
+          "title": "Políticas de Adaptación al Cambio Tecnológico",
+          "description": "Existencia de diálogos entre gobierno, empresas y sindicatos. Marcos regulatorios para la IA y la automatización."
+        },
+        {
+          "title": "Brecha Digital y Equidad",
+          "description": "¿Cómo la automatización puede exacerbar desigualdades? Acceso equitativo a la educación y tecnología en todo el país (urbano vs. rural)."
+        }
+      ]
+    }
+  }

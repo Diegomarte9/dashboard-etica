@@ -12,20 +12,20 @@ export function SidebarOptInForm() {
   return (
     <Card className="gap-2 py-4 shadow-none">
       <CardHeader className="px-4">
-        <CardTitle className="text-sm">Subscribe to our newsletter</CardTitle>
+        <CardTitle className="text-sm">Suscríbete a las actualizaciones</CardTitle>
         <CardDescription>
-          Opt-in to receive updates and news about the sidebar.
+          Recibe notificaciones sobre reportes de cumplimiento ético, nuevos incidentes y métricas importantes del dashboard.
         </CardDescription>
       </CardHeader>
       <CardContent className="px-4">
         <form>
           <div className="grid gap-2.5">
-            <SidebarInput type="email" placeholder="Email" />
+            <SidebarInput type="email" placeholder="Tu correo electrónico" />
             <Button
               className="bg-sidebar-primary text-sidebar-primary-foreground w-full shadow-none"
               size="sm"
             >
-              Subscribe
+              Suscribirse
             </Button>
           </div>
         </form>
