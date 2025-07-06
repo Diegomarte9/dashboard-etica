@@ -14,8 +14,15 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar"
 import { ModeToggle } from "@/components/mode-toggle"
+import { ChartPiePIB } from "@/components/ui/chart-pie-pib"
+import { ChartBarEmpleo } from "@/components/ui/chart-bar-empleo"
+import { ChartRadarHabilidades } from "@/components/ui/chart-radar-habilidades"
+import { ChartLineDesempleo } from "@/components/ui/chart-line-desempleo"
+import { ChartAreaEmpleos } from "@/components/ui/chart-area-empleos"
+import { ChartRadialFormacion } from "@/components/ui/chart-radial-formacion"
+import { ChartAreaInteractive } from "@/components/ui/chart-area-interactive"
 
-export default function Page() {
+export default function DashboardPage() {
   return (
     <SidebarProvider>
       <AppSidebar />
@@ -31,12 +38,12 @@ export default function Page() {
               <BreadcrumbList>
                 <BreadcrumbItem className="hidden md:block">
                   <BreadcrumbLink href="#">
-                    Building Your Application
+                    Dashboard de Ética
                   </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator className="hidden md:block" />
                 <BreadcrumbItem>
-                  <BreadcrumbPage>Data Fetching</BreadcrumbPage>
+                  <BreadcrumbPage>Dashboard</BreadcrumbPage>
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>
@@ -44,12 +51,17 @@ export default function Page() {
           </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4">
-          <div className="grid auto-rows-min gap-4 md:grid-cols-3">
-            <div className="bg-muted/50 aspect-video rounded-xl" />
-            <div className="bg-muted/50 aspect-video rounded-xl" />
-            <div className="bg-muted/50 aspect-video rounded-xl" />
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <ChartPiePIB />
+            <ChartBarEmpleo />
+            <ChartRadarHabilidades />
+            <ChartLineDesempleo />
+            <ChartAreaEmpleos />
+            <ChartRadialFormacion />
           </div>
-          <div className="bg-muted/50 min-h-[100vh] flex-1 rounded-xl md:min-h-min" />
+          <div className="grid gap-4">
+            <ChartAreaInteractive />
+          </div>
         </div>
       </SidebarInset>
     </SidebarProvider>

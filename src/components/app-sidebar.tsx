@@ -1,7 +1,6 @@
 import * as React from "react"
-import { GalleryVerticalEnd } from "lucide-react"
-
-import { NavMain } from "@/components/nav-main"
+import { GalleryVerticalEnd, BarChart3, Globe, Bot, MessageSquare, Scale } from "lucide-react"
+import { Link, useLocation } from "react-router-dom"
 import { SidebarOptInForm } from "@/components/sidebar-otp-in-form"
 import {
   Sidebar,
@@ -14,138 +13,16 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar"
 
-// This is sample data.
-const data = {
-  navMain: [
-    {
-      title: "Getting Started",
-      url: "#",
-      items: [
-        {
-          title: "Installation",
-          url: "#",
-        },
-        {
-          title: "Project Structure",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Building Your Application",
-      url: "#",
-      items: [
-        {
-          title: "Routing",
-          url: "#",
-        },
-        {
-          title: "Data Fetching",
-          url: "#",
-          isActive: true,
-        },
-        {
-          title: "Rendering",
-          url: "#",
-        },
-        {
-          title: "Caching",
-          url: "#",
-        },
-        {
-          title: "Styling",
-          url: "#",
-        },
-        {
-          title: "Optimizing",
-          url: "#",
-        },
-        {
-          title: "Configuring",
-          url: "#",
-        },
-        {
-          title: "Testing",
-          url: "#",
-        },
-        {
-          title: "Authentication",
-          url: "#",
-        },
-        {
-          title: "Deploying",
-          url: "#",
-        },
-        {
-          title: "Upgrading",
-          url: "#",
-        },
-        {
-          title: "Examples",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "API Reference",
-      url: "#",
-      items: [
-        {
-          title: "Components",
-          url: "#",
-        },
-        {
-          title: "File Conventions",
-          url: "#",
-        },
-        {
-          title: "Functions",
-          url: "#",
-        },
-        {
-          title: "next.config.js Options",
-          url: "#",
-        },
-        {
-          title: "CLI",
-          url: "#",
-        },
-        {
-          title: "Edge Runtime",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Architecture",
-      url: "#",
-      items: [
-        {
-          title: "Accessibility",
-          url: "#",
-        },
-        {
-          title: "Fast Refresh",
-          url: "#",
-        },
-        {
-          title: "Next.js Compiler",
-          url: "#",
-        },
-        {
-          title: "Supported Browsers",
-          url: "#",
-        },
-        {
-          title: "Turbopack",
-          url: "#",
-        },
-      ],
-    },
-  ],
-}
+const navigationItems = [
+  { title: "Dashboard", href: "/dashboard", icon: BarChart3 },
+  { title: "Panorama Laboral", href: "/panorama", icon: Globe },
+  { title: "Automatización", href: "/automatizacion", icon: Bot },
+  { title: "Debate", href: "/debate", icon: MessageSquare },
+  { title: "Ética", href: "/etica", icon: Scale },
+]
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+  const location = useLocation()
   return (
     <Sidebar {...props}>
       <SidebarHeader>
@@ -166,7 +43,23 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
-        <NavMain items={data.navMain} />
+        <nav>
+          <ul className="flex flex-col gap-1 mt-4">
+            {navigationItems.map((item) => (
+              <SidebarMenuItem key={item.href}>
+                <SidebarMenuButton
+                  asChild
+                  isActive={location.pathname === item.href}
+                >
+                  <Link to={item.href} className="flex items-center gap-2">
+                    <item.icon className="size-4" />
+                    <span>{item.title}</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            ))}
+          </ul>
+        </nav>
       </SidebarContent>
       <SidebarFooter>
         <div className="p-1">
