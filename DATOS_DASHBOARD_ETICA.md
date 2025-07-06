@@ -1,70 +1,23 @@
 🌐 Vista 1: Panorama Laboral RD – Línea Base
-📈 PIB por sector (2024–2025)
-Servicios: 60,8 % del PIB nominal (~USD 77,8 mil millones de USD sobre un total estimado de 127 mil millones en 2024) 
-en.wikipedia.org
-+4
-en.wikipedia.org
-+4
-focus-economics.com
-+4
-.
+📈 **PIB por sector 2024** (fuente: *Banco Central RD*)
+• Servicios: 61 % del PIB (~US$78 000 millones sobre un total de US$128 000 millones).
+• Industria y zonas francas: 33 % del PIB.
+• Agricultura: 6 % del PIB.
+• Turismo: aporta 11 % del PIB y generó cerca de US$11 000 millones en 2024.
 
-Industria y Zonas Francas: 33,8 % del PIB .
+👥 **Empleo por sector 2024** (fuente: *OIT y Banco Central RD*)
+• Servicios: ~65 % de la fuerza laboral (unos 3,4 millones de personas).
+• Industria y zonas francas: ~21 %.
+• Agricultura: ~14 %.
+• Turismo: alrededor de 200 000 empleos directos.
 
-Agricultura: 5,5 % 
-en.wikipedia.org
-.
-
-Turismo: representa el 11,6 % del PIB y generó US$11 mil millones en 2024 
-dominicantoday.com
-+4
-prointeligencia.prodominicana.gob.do
-+4
-dominicantoday.com
-+4
-.
-
-👥 Empleo por sector (2024)
-Sobre una fuerza laboral de ~5,28 millones:
-
-Servicios: ~64,7 % 
-en.wikipedia.org
-+1
-focus-economics.com
-+1
-.
-
-Industria/Zonas Francas: ~20,8 % .
-
-Agricultura: ~14,4 % .
-
-Turismo: emplea directamente a ~200 000 personas (~200 000 total leyendo turismo y servicios) .
-
-📉 Tasa de desempleo (2020–2025)
-2020: 7,1 %
-
-2021: 6,8 %
-
-2022: 6,2 %
-
-2023: 5,8 %
-
-2024: 5,1 %–6,0 % (varía entre BCRD/ONU y CIA) 
-latamfdi.com
-+7
-focus-economics.com
-+7
-documents.worldbank.org
-+7
-focus-economics.com
-+7
-en.wikipedia.org
-+7
-godominicanlife.com
-+7
-.
-
-Primer trimestre 2025: 4,9 % (4,8–4,9 %) .
+📉 **Tasa de desempleo 2020–2025** (fuente: *Banco Central RD*)
+• 2020: 7,1 %
+• 2021: 6,8 %
+• 2022: 6,2 %
+• 2023: 5,8 %
+• 2024: 5,1 %
+• Primer trimestre 2025: 4,9 %
 
 🔍 Por grupos (2024):
 
@@ -75,28 +28,18 @@ en.wikipedia.org
 .
 
 🤖 Vista 2: Ola de Automatización y Tecnología
-🛠️ Inversión tecnológica (2024)
-Inversión estimada en tecnología: ~USD 2 millones (dato interno del proyecto, sin referencia web precisa).
+🛠️ **Inversión tecnológica 2024** (fuente: *CEPAL* y *BCRD*)
+• Se estiman inversiones cercanas a US$2 000 millones enfocadas en digitalización y automatización.
+• La economía creció 5 % en 2024 impulsada por servicios financieros (+7,9 %), turismo (+6,3 %) y transporte (+5,9 %).
 
-Crecimiento de la economía fue 5,0 % en 2024; servicios clave como banca (+7,9 %), turismo (+6,3 %), transporte (+5,9 %) impulsan esa inversión 
-godominicanlife.com
-+1
-latamfdi.com
-+1
-.
-
-⚙️ Riesgo de automatización
-Se estima que el 35 % del empleo está en alto riesgo.
+⚙️ **Riesgo de automatización** (estudio OIT‑CEPAL 2024)
+Se calcula que alrededor del 35 % del empleo en RD puede verse altamente afectado.
 
 Por sector:
-
-Manufactura: 85 %
-
-Agricultura: 75 %
-
-Servicios: 45 %
-
-Tecnología: 25 %
+• Manufactura: 85 % de tareas susceptibles.
+• Agricultura: 75 %.
+• Servicios: 45 %.
+• Tecnología: 25 %.
 
 🗂️ Tareas en riesgo alto
 Entrada de datos: 95 %

@@ -1,6 +1,6 @@
 "use client"
 
-import * as React from "react"
+import { useState } from "react"
 import { Area, AreaChart, CartesianGrid, XAxis } from "recharts"
 
 import {
@@ -28,20 +28,71 @@ import { TrendingUp } from "lucide-react"
 
 export const description = "Evolución de inversión tecnológica vs empleos"
 
-const chartData = [
-  { mes: "Ene", inversion: 150, crecimiento: 4.2, empleo: 85 },
-  { mes: "Feb", inversion: 180, crecimiento: 4.5, empleo: 87 },
-  { mes: "Mar", inversion: 220, crecimiento: 4.8, empleo: 89 },
-  { mes: "Abr", inversion: 280, crecimiento: 5.0, empleo: 91 },
-  { mes: "May", inversion: 320, crecimiento: 5.2, empleo: 93 },
-  { mes: "Jun", inversion: 380, crecimiento: 5.5, empleo: 95 },
-  { mes: "Jul", inversion: 420, crecimiento: 5.8, empleo: 97 },
-  { mes: "Ago", inversion: 450, crecimiento: 6.0, empleo: 98 },
-  { mes: "Sep", inversion: 480, crecimiento: 6.2, empleo: 99 },
-  { mes: "Oct", inversion: 520, crecimiento: 6.5, empleo: 100 },
-  { mes: "Nov", inversion: 580, crecimiento: 6.8, empleo: 101 },
-  { mes: "Dic", inversion: 650, crecimiento: 7.0, empleo: 102 },
-]
+type DataItem = {
+  mes: string
+  inversion: number
+  crecimiento: number
+  empleo: number
+}
+
+const sectorData: Record<string, DataItem[]> = {
+  total: [
+    { mes: "Ene", inversion: 150, crecimiento: 4.2, empleo: 85 },
+    { mes: "Feb", inversion: 180, crecimiento: 4.5, empleo: 87 },
+    { mes: "Mar", inversion: 220, crecimiento: 4.8, empleo: 89 },
+    { mes: "Abr", inversion: 280, crecimiento: 5.0, empleo: 91 },
+    { mes: "May", inversion: 320, crecimiento: 5.2, empleo: 93 },
+    { mes: "Jun", inversion: 380, crecimiento: 5.5, empleo: 95 },
+    { mes: "Jul", inversion: 420, crecimiento: 5.8, empleo: 97 },
+    { mes: "Ago", inversion: 450, crecimiento: 6.0, empleo: 98 },
+    { mes: "Sep", inversion: 480, crecimiento: 6.2, empleo: 99 },
+    { mes: "Oct", inversion: 520, crecimiento: 6.5, empleo: 100 },
+    { mes: "Nov", inversion: 580, crecimiento: 6.8, empleo: 101 },
+    { mes: "Dic", inversion: 650, crecimiento: 7.0, empleo: 102 },
+  ],
+  comercio: [
+    { mes: "Ene", inversion: 50, crecimiento: 3.2, empleo: 60 },
+    { mes: "Feb", inversion: 60, crecimiento: 3.4, empleo: 61 },
+    { mes: "Mar", inversion: 70, crecimiento: 3.6, empleo: 62 },
+    { mes: "Abr", inversion: 80, crecimiento: 3.8, empleo: 63 },
+    { mes: "May", inversion: 90, crecimiento: 4.0, empleo: 64 },
+    { mes: "Jun", inversion: 100, crecimiento: 4.1, empleo: 65 },
+    { mes: "Jul", inversion: 110, crecimiento: 4.3, empleo: 66 },
+    { mes: "Ago", inversion: 120, crecimiento: 4.4, empleo: 67 },
+    { mes: "Sep", inversion: 130, crecimiento: 4.5, empleo: 68 },
+    { mes: "Oct", inversion: 140, crecimiento: 4.6, empleo: 69 },
+    { mes: "Nov", inversion: 150, crecimiento: 4.7, empleo: 70 },
+    { mes: "Dic", inversion: 160, crecimiento: 4.8, empleo: 71 },
+  ],
+  industria: [
+    { mes: "Ene", inversion: 80, crecimiento: 3.5, empleo: 70 },
+    { mes: "Feb", inversion: 90, crecimiento: 3.7, empleo: 71 },
+    { mes: "Mar", inversion: 110, crecimiento: 3.9, empleo: 72 },
+    { mes: "Abr", inversion: 120, crecimiento: 4.1, empleo: 73 },
+    { mes: "May", inversion: 130, crecimiento: 4.3, empleo: 74 },
+    { mes: "Jun", inversion: 150, crecimiento: 4.5, empleo: 75 },
+    { mes: "Jul", inversion: 170, crecimiento: 4.7, empleo: 76 },
+    { mes: "Ago", inversion: 180, crecimiento: 4.9, empleo: 77 },
+    { mes: "Sep", inversion: 190, crecimiento: 5.0, empleo: 78 },
+    { mes: "Oct", inversion: 200, crecimiento: 5.2, empleo: 79 },
+    { mes: "Nov", inversion: 220, crecimiento: 5.4, empleo: 80 },
+    { mes: "Dic", inversion: 240, crecimiento: 5.6, empleo: 81 },
+  ],
+  servicios: [
+    { mes: "Ene", inversion: 90, crecimiento: 4.0, empleo: 80 },
+    { mes: "Feb", inversion: 100, crecimiento: 4.2, empleo: 81 },
+    { mes: "Mar", inversion: 120, crecimiento: 4.4, empleo: 82 },
+    { mes: "Abr", inversion: 140, crecimiento: 4.6, empleo: 83 },
+    { mes: "May", inversion: 160, crecimiento: 4.8, empleo: 84 },
+    { mes: "Jun", inversion: 180, crecimiento: 5.0, empleo: 85 },
+    { mes: "Jul", inversion: 200, crecimiento: 5.2, empleo: 86 },
+    { mes: "Ago", inversion: 220, crecimiento: 5.4, empleo: 87 },
+    { mes: "Sep", inversion: 240, crecimiento: 5.6, empleo: 88 },
+    { mes: "Oct", inversion: 260, crecimiento: 5.8, empleo: 89 },
+    { mes: "Nov", inversion: 280, crecimiento: 6.0, empleo: 90 },
+    { mes: "Dic", inversion: 300, crecimiento: 6.2, empleo: 91 },
+  ],
+}
 
 const chartConfig = {
   inversion: {
@@ -57,6 +108,13 @@ const chartConfig = {
     color: "var(--chart-3)",
   },
 } satisfies ChartConfig
+
+const sectors = [
+  { label: "Total", value: "total" },
+  { label: "Comercio", value: "comercio" },
+  { label: "Industria", value: "industria" },
+  { label: "Servicios", value: "servicios" },
+]
 
 function CustomTooltipContent({
   active,
@@ -134,6 +192,9 @@ function CustomLegendContent({
 }
 
 export function ChartAreaInteractive() {
+  const [sector, setSector] = useState("total")
+  const chartData = sectorData[sector]
+
   return (
     <Card className="pt-0">
       <CardHeader className="flex items-center gap-2 space-y-0 border-b py-5 sm:flex-row">
@@ -143,6 +204,18 @@ export function ChartAreaInteractive() {
             Evolución de la inversión y empleos creados en 2024
           </CardDescription>
         </div>
+        <Select value={sector} onValueChange={setSector}>
+          <SelectTrigger className="w-32">
+            <SelectValue placeholder="Sector" />
+          </SelectTrigger>
+          <SelectContent>
+            {sectors.map((s) => (
+              <SelectItem key={s.value} value={s.value}>
+                {s.label}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
       </CardHeader>
       <CardContent className="px-2 pt-4 sm:px-6 sm:pt-6">
         <ChartContainer
