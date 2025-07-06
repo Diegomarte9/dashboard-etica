@@ -294,7 +294,6 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 ## 📞 Contacto
 
 - **Email**: diegomarte9@gmail.com
-- **LinkedIn**: [tu-linkedin]
 - **GitHub**: https://github.com/Diegomarte9
 
 ---
