@@ -17,22 +17,9 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart"
+import chartData from "@/data.json"
 
 export const description = "Tasa de desempleo República Dominicana"
-
-const chartData = [
-  { year: "2015", unemployment: 14.0 },
-  { year: "2016", unemployment: 7.1 },
-  { year: "2017", unemployment: 5.5 },
-  { year: "2018", unemployment: 5.6 },
-  { year: "2019", unemployment: 3.8 },
-  { year: "2020", unemployment: 10.8 },
-  { year: "2021", unemployment: 7.4 },
-  { year: "2022", unemployment: 5.2 },
-  { year: "2023", unemployment: 4.8 },
-  { year: "2024", unemployment: 5.1 },
-  { year: "2025", unemployment: 4.9 },
-]
 
 const chartConfig = {
   unemployment: {
@@ -55,7 +42,7 @@ export function ChartBarLabelCustom() {
         <ChartContainer config={chartConfig}>
           <BarChart
             accessibilityLayer
-            data={chartData}
+            data={chartData.barChartUnemployment}
             layout="vertical"
             margin={{
               right: 16,

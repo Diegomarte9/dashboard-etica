@@ -17,14 +17,9 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart"
+import chartData from "@/data.json"
 
 export const description = "Ingresos laborales por hora República Dominicana"
-
-const chartData = [
-  { sector: "Promedio Total", income: 162.8, growth: "+11.4%" },
-  { sector: "Sector Formal", income: 189.26, growth: "+13.5%" },
-  { sector: "Sector Informal", income: 138.81, growth: "+6.9%" },
-]
 
 const chartConfig = {
   income: {
@@ -44,7 +39,7 @@ export function ChartBarIncome() {
         <ChartContainer config={chartConfig}>
           <BarChart
             accessibilityLayer
-            data={chartData}
+            data={chartData.barChartIncome}
             margin={{
               top: 20,
             }}
