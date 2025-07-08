@@ -17,20 +17,9 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart"
+import chartData from "@/data.json"
 
 export const description = "Exposición estimada a la IA por categoría laboral"
-
-const chartData = [
-  { categoria: "Introducción de datos", exposicion: 85, fill: "oklch(0.52 0.18 29)" },
-  { categoria: "Contabilidad", exposicion: 75, fill: "oklch(0.48 0.18 29)" },
-  { categoria: "Recursos humanos", exposicion: 65, fill: "oklch(0.56 0.18 29)" },
-  { categoria: "Seguros", exposicion: 68, fill: "oklch(0.60 0.18 29)" },
-  { categoria: "Ventas internas", exposicion: 70, fill: "oklch(0.54 0.18 29)" },
-  { categoria: "Analistas financieros", exposicion: 58, fill: "oklch(0.50 0.18 29)" },
-  { categoria: "Desarrolladores multimedia", exposicion: 55, fill: "oklch(0.58 0.18 29)" },
-  { categoria: "Gestores de nómina", exposicion: 65, fill: "oklch(0.62 0.18 29)" },
-  { categoria: "Medios digitales y contenido en internet", exposicion: 78, fill: "oklch(0.44 0.18 29)" },
-]
 
 const chartConfig = {
   exposicion: {
@@ -55,7 +44,7 @@ export function ChartPieIAExposure() {
         >
           <PieChart>
             <ChartTooltip content={<ChartTooltipContent hideLabel nameKey="categoria" />} />
-            <Pie data={chartData} dataKey="exposicion" label nameKey="categoria" />
+            <Pie data={chartData.pieChartIAExposure} dataKey="exposicion" label nameKey="categoria" />
           </PieChart>
         </ChartContainer>
       </CardContent>

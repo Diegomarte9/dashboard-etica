@@ -15,6 +15,7 @@ import {
   ChartContainer,
   ChartTooltip,
 } from "@/components/ui/chart"
+import chartData from "@/data.json"
 
 export const description = "Radar chart: Riesgo de automatización por sector (RD adaptado)"
 
@@ -28,16 +29,6 @@ const sectorNames = {
   "Salud": "Salud",
   "Educación": "Educación",
 }
-
-const chartData = [
-  { sector: "Ind./Manuf.", riesgo: 68 },
-  { sector: "Transp./Log.", riesgo: 72 },
-  { sector: "Fin./Banca", riesgo: 61 },
-  { sector: "Com. Minorista", riesgo: 59 },
-  { sector: "Agri./Prim.", riesgo: 55 },
-  { sector: "Salud", riesgo: 34 },
-  { sector: "Educación", riesgo: 29 },
-]
 
 const chartConfig = {
   riesgo: {
@@ -90,7 +81,7 @@ export function ChartRadarAutomationRisk() {
           config={chartConfig}
           className="mx-auto aspect-square max-h-[300px]"
         >
-          <RadarChart data={chartData}>
+          <RadarChart data={chartData.radarChartAutomationRisk}>
             <ChartTooltip cursor={false} content={CustomTooltip} />
             <PolarAngleAxis dataKey="sector" tick={CustomTick} />
             <PolarGrid />

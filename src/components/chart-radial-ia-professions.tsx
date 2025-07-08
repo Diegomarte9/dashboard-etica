@@ -16,17 +16,9 @@ import {
   ChartContainer,
   ChartTooltip,
 } from "@/components/ui/chart"
+import chartData from "@/data.json"
 
 export const description = "Profesiones emergentes en IA (RD 2023–2025)"
-
-const chartData = [
-  { profesion: "Analista de datos", crecimiento: 38, adopcion: "Medio", fill: "var(--dashboard-chart)" },
-  { profesion: "Especialista en IA", crecimiento: 44, adopcion: "Bajo-medio", fill: "var(--dashboard-chart)" },
-  { profesion: "Desarrollador RPA", crecimiento: 30, adopcion: "Bajo", fill: "var(--dashboard-chart)" },
-  { profesion: "Ing. Machine Learning", crecimiento: 26, adopcion: "Bajo", fill: "var(--dashboard-chart)" },
-  { profesion: "Consultor ética tech", crecimiento: 20, adopcion: "Muy bajo", fill: "var(--dashboard-chart)" },
-  { profesion: "Gestor transf. digital", crecimiento: 29, adopcion: "Medio", fill: "var(--dashboard-chart)" },
-]
 
 const chartConfig = {
   crecimiento: {
@@ -65,7 +57,7 @@ export function ChartRadialIAProfessions() {
           config={chartConfig}
           className="mx-auto aspect-square max-h-[250px]"
         >
-          <RadialBarChart data={chartData} innerRadius={30} outerRadius={110}>
+          <RadialBarChart data={chartData.radialChartIAProfessions} innerRadius={30} outerRadius={110}>
             <ChartTooltip
               cursor={false}
               content={CustomTooltip}

@@ -17,17 +17,9 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart"
+import chartData from "@/data.json"
 
 export const description = "Crecimiento del uso de IA en empresas dominicanas"
-
-const chartData = [
-  { year: "2020", adopcionIA: 6 },
-  { year: "2021", adopcionIA: 10 },
-  { year: "2022", adopcionIA: 16 },
-  { year: "2023", adopcionIA: 23 },
-  { year: "2024", adopcionIA: 31 },
-  { year: "2025", adopcionIA: 39 },
-]
 
 const chartConfig = {
   adopcionIA: {
@@ -47,7 +39,7 @@ export function ChartLineIAGrowth() {
         <ChartContainer config={chartConfig}>
           <LineChart
             accessibilityLayer
-            data={chartData}
+            data={chartData.lineChartIAGrowth}
             margin={{
               left: 12,
               right: 12,
