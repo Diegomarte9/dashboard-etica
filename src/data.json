@@ -42,15 +42,15 @@
     { "profesion": "Gestor transf. digital", "crecimiento": 29, "adopcion": "Medio", "fill": "var(--dashboard-chart)" }
   ],
   "barChartUnemployment": [
-    { "year": "2015", "unemployment": 14.0 },
-    { "year": "2016", "unemployment": 7.1 },
-    { "year": "2017", "unemployment": 5.5 },
-    { "year": "2018", "unemployment": 5.6 },
-    { "year": "2019", "unemployment": 3.8 },
-    { "year": "2020", "unemployment": 10.8 },
-    { "year": "2021", "unemployment": 7.4 },
-    { "year": "2022", "unemployment": 5.2 },
-    { "year": "2023", "unemployment": 4.8 },
+    { "year": "2015", "unemployment": 6.7},
+    { "year": "2016", "unemployment": 6.5 },
+    { "year": "2017", "unemployment": 5.4 },
+    { "year": "2018", "unemployment": 6.1 },
+    { "year": "2019", "unemployment": 6.0 },
+    { "year": "2020", "unemployment": 7.5 },
+    { "year": "2021", "unemployment": 7.3 },
+    { "year": "2022", "unemployment": 4.9 },
+    { "year": "2023", "unemployment": 5.1 },
     { "year": "2024", "unemployment": 5.1 },
     { "year": "2025", "unemployment": 4.9 }
   ]
